@@ -6,3 +6,5 @@ This repository contains my C programming practice.
 -Other C programs
 ##Purpose
 Learning programming and practicing DSA
+hey
+hello
