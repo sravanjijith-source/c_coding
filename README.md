@@ -8,4 +8,5 @@ This repository contains my C programming practice.
 Learning programming and practicing DSA
 hey
 hello
-hi
+Learning Git and GitHub step by step!
+
