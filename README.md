@@ -9,4 +9,3 @@ Learning programming and practicing DSA
 hey
 hello
 Learning Git and GitHub step by step!
-just to learn
