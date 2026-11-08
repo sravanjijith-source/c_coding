@@ -1,15 +1,14 @@
 #include<stdio.h>
 #include<stdlib.h>
 void radixsort(int exp,int largest,int *a,int n){
-    int freq[largest+1]={0};
-    for(int i=0; i<n; i++){
-        freq[a[i]]++;
-    }
-    int k=0;
-    for(int i=0; i<=largest; i++){
-        while(freq[i]>0){
-            a[k++]=i;
-            freq[i]--;
+    for(int i=0; i<n-1; i++){
+        for(int j=0; j<n-i-1; j++)
+        {
+            if(a[j]/exp%10>a[j+1]/exp%10){
+                a[j]+=a[j+1];
+                a[j+1]=a[j]-a[j+1];
+                a[j]-=a[j+1];
+            }
         }
     }
 }
@@ -29,5 +28,6 @@ int main(){
     for(; largest/exp>0; exp*=10){
         radixsort(exp,largest,a,n);
     }
+    for(i=0; i<n; i++)printf("%d ",a[i]);
 
 }
