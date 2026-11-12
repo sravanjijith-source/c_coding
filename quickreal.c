@@ -10,19 +10,19 @@ if(low<high){
 }
 int partition(int low,int high,int *a){
     int pivot=a[low];
-    int i=low,j=high;
+    int i=low,j=high,t;
     while(i<j){
         while(i<high&&a[i]<=pivot)i++;
         while(j>=low&&a[j]>pivot)j--;
         if(i<j){
-            a[j]+=a[i];
-            a[i]=a[j]-a[i];
-            a[j]-=a[i];
+            t=a[i];
+            a[i]=a[j];
+            a[j]=t;
         }
         else{
-            a[j]+=pivot;
-            a[low]=a[j]-pivot;
-            a[j]-=a[low];
+            t=a[low];
+            a[low]=a[j];
+            a[j]=t;
         }
     }
     return j;
